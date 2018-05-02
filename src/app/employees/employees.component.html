@@ -1,12 +1,15 @@
+<li *ngFor="let emp of employeelist">
 <div style="color:Blue">
    Employee Id:  {{emp.id}} <br>
    Employee Name:  {{emp.name}} <br>
    Employee Salary:  {{emp.Salary}} <br>
-</div><br>
+</div>
+</li>
+<br>
 <br>    
-<input type="button" id="btnInsert" value="Insert">
-<input type="button" id="btnUpdate" value="Update">
-<input type="button" id="btnDelete" value="Delete">
+<input type="button" id="btnInsert" (click)="" value="Insert">
+<input type="button" id="btnUpdate" (click)="" value="Update">
+<input type="button" id="btnDelete" (click)="" value="Delete">
 
 
 
