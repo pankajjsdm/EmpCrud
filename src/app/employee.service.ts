@@ -19,6 +19,12 @@ export class EmployeeService {
      .map((res:Response) => res.json())
      //...errors if any
      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
-
+}
+InsertEmployee(data:Emp):Observable<any>{
+  let headers = new Headers({ 'Content-Type': 'application/json; charset=utf-8' });
+    let options = new RequestOptions({ headers: headers });
+    let body = JSON.stringify(data);
+ return this.http.post(this.serviceurl,body,options).map((res:Response)=>res.json())
+  .catch((error:any)=>Observable.throw(error.json().error || 'Server Error'));
 }
 }
